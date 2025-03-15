@@ -1,35 +1,24 @@
 import React from "react";
-import "./button.css";
+import "./Button.css";
 
-interface ButtonProps {
-  label?: string;
-  variant?: "primary" | "secondary" | "outlined" | "icon";
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "contained" | "outlined" | "text";
+  color?: "primary" | "secondary" | "success" | "warning" | "danger" | "info";
   size?: "small" | "medium" | "large";
-  rounded?: boolean;
-  icon?: React.ReactNode;
-  onClick?: () => void;
-  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
-  label,
-  variant = "primary",
+  variant = "contained",
+  color = "primary",
   size = "medium",
-  rounded = false,
-  icon,
-  onClick,
-  disabled = false,
+  children,
+  ...props
 }) => {
+  const className = `btn ${variant} ${color} ${size}`;
+
   return (
-    <button
-      className={`custom-button ${variant} ${size} ${
-        rounded ? "rounded" : ""
-      } ${icon && !label ? "icon-only" : ""}`}
-      onClick={onClick}
-      disabled={disabled}
-    >
-      {icon && <span className="button-icon">{icon}</span>}
-      {label && <span className="button-label">{label}</span>}
+    <button className={className} {...props}>
+      {children}
     </button>
   );
 };

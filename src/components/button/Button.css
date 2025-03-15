@@ -1,0 +1,186 @@
+@import "../../styles/configs.css";
+
+/* Base Button Styles */
+.btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+/* Contained Variant */
+.btn.contained {
+  color: var(--text-color);
+  border: none;
+}
+
+.btn.contained.primary {
+  background: var(--primary-color);
+}
+
+.btn.contained.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.contained.secondary {
+  background: var(--secondary-color);
+}
+
+.btn.contained.secondary:hover {
+  background: var(--secondary-hover);
+}
+
+/* Outlined Variant */
+.btn.outlined {
+  background: transparent;
+  border: 2px solid;
+}
+
+.btn.outlined.primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn.outlined.primary:hover {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Text Variant */
+.btn.text {
+  background: transparent;
+  border: none;
+}
+
+.btn.text.primary {
+  color: var(--primary-color);
+}
+
+.btn.text.primary:hover {
+  background: rgba(25, 118, 210, 0.1);
+}
+
+/* Button Sizes */
+.btn.small {
+  padding: var(--padding-sm);
+  font-size: 14px;
+}
+
+.btn.medium {
+  padding: var(--padding-md);
+  font-size: 16px;
+}
+
+.btn.large {
+  padding: var(--padding-lg);
+  font-size: 18px;
+}
+
+/* Contained Variant */
+.btn.contained.success {
+  background: var(--success-color);
+}
+
+.btn.contained.success:hover {
+  background: var(--success-hover);
+}
+
+.btn.contained.warning {
+  background: var(--warning-color);
+}
+
+.btn.contained.warning:hover {
+  background: var(--warning-hover);
+}
+
+.btn.contained.danger {
+  background: var(--danger-color);
+}
+
+.btn.contained.danger:hover {
+  background: var(--danger-hover);
+}
+
+.btn.contained.info {
+  background: var(--info-color);
+}
+
+.btn.contained.info:hover {
+  background: var(--info-hover);
+}
+
+/* Outlined Variant */
+.btn.outlined.success {
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn.outlined.success:hover {
+  background: var(--success-color);
+  color: var(--text-color);
+}
+
+.btn.outlined.warning {
+  color: var(--warning-color);
+  border-color: var(--warning-color);
+}
+
+.btn.outlined.warning:hover {
+  background: var(--warning-color);
+  color: var(--text-color);
+}
+
+.btn.outlined.danger {
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+.btn.outlined.danger:hover {
+  background: var(--danger-color);
+  color: var(--text-color);
+}
+
+.btn.outlined.info {
+  color: var(--info-color);
+  border-color: var(--info-color);
+}
+
+.btn.outlined.info:hover {
+  background: var(--info-color);
+  color: var(--text-color);
+}
+
+/* Text Variant */
+.btn.text.success {
+  color: var(--success-color);
+}
+
+.btn.text.success:hover {
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.btn.text.warning {
+  color: var(--warning-color);
+}
+
+.btn.text.warning:hover {
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.btn.text.danger {
+  color: var(--danger-color);
+}
+
+.btn.text.danger:hover {
+  background: rgba(220, 53, 69, 0.1);
+}
+
+.btn.text.info {
+  color: var(--info-color);
+}
+
+.btn.text.info:hover {
+  background: rgba(23, 162, 184, 0.1);
+}

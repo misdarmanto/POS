@@ -1,12 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
-import { FaCheck, FaPlus } from "react-icons/fa";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
   component: Button,
-  args: {
-    label: "Click Me",
+  argTypes: {
+    variant: { control: "radio", options: ["contained", "outlined", "text"] },
+    color: {
+      control: "radio",
+      options: ["primary", "secondary", "success", "warning", "danger", "info"],
+    },
+    size: { control: "radio", options: ["small", "medium", "large"] },
+    children: { control: "text" },
   },
 };
 
@@ -14,58 +19,29 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const PrimaryContained: Story = {
   args: {
-    label: "Primary Button",
-    variant: "primary",
+    variant: "contained",
+    color: "primary",
+    size: "medium",
+    children: "Primary",
   },
 };
 
-export const Secondary: Story = {
+export const SecondaryOutlined: Story = {
   args: {
-    label: "Secondary Button",
-    variant: "secondary",
-  },
-};
-
-export const Outlined: Story = {
-  args: {
-    label: "Outlined Button",
     variant: "outlined",
+    color: "secondary",
+    size: "medium",
+    children: "Secondary",
   },
 };
 
-export const Small: Story = {
+export const SuccessText: Story = {
   args: {
-    label: "Small Button",
-    size: "small",
-  },
-};
-
-export const Large: Story = {
-  args: {
-    label: "Large Button",
-    size: "large",
-  },
-};
-
-export const Rounded: Story = {
-  args: {
-    label: "Rounded Button",
-    rounded: true,
-  },
-};
-
-export const IconButton: Story = {
-  args: {
-    icon: <FaCheck />,
-    variant: "icon",
-  },
-};
-
-export const ButtonWithIcon: Story = {
-  args: {
-    label: "Add",
-    icon: <FaPlus />,
+    variant: "text",
+    color: "success",
+    size: "medium",
+    children: "Success",
   },
 };

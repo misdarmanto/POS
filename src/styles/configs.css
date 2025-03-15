@@ -1,13 +1,37 @@
 :root {
-  --primary-color: #6200ea;
-  --primary-hover: #3700b3;
-  --secondary-color: #03dac6;
-  --secondary-hover: #018786;
-  --text-color: #ffffff;
-  --border-color: #6200ea;
-  --border-radius: 4px;
-  --padding-sm: 6px 12px;
-  --padding-md: 10px 16px;
-  --padding-lg: 14px 20px;
-  --icon-size: 20px;
+  --primary-color: #1976d2;
+  --primary-hover: #1565c0;
+  --secondary-color: #9c27b0;
+  --secondary-hover: #7b1fa2;
+  --text-color: #fdfcfc;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --border-radius: 8px;
+
+  /* Button Padding */
+  --padding-sm: 6px 16px;
+  --padding-md: 8px 20px;
+  --padding-lg: 10px 24px;
+
+  /* Shadow & Elevation */
+  --box-shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  --box-shadow-md: 0px 3px 6px rgba(0, 0, 0, 0.15);
+  --box-shadow-lg: 0px 6px 12px rgba(0, 0, 0, 0.1);
+
+  /* Icon Size */
+  --icon-size: 24px;
+
+  /* Additional Colors */
+  --success-color: #2e7d32; /*  Success */
+  --success-hover: #1b5e20;
+  --warning-color: #ed6c02; /*  Warning */
+  --warning-hover: #e65100;
+  --danger-color: #d32f2f; /*  Error */
+  --danger-hover: #b71c1c;
+  --info-color: #0288d1; /*  Info */
+  --info-hover: #0277bd;
+  --light-color: #f5f5f5; /*  Light Gray */
+  --dark-color: #424242; /*  Dark Gray */
+
+  /* Animation */
+  --transition: all 0.3s ease-in-out;
 }
