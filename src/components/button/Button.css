@@ -12,7 +12,7 @@
 
 /* Contained Variant */
 .btn.contained {
-  color: var(--text-color);
+  color: white;
   border: none;
 }
 
@@ -45,7 +45,7 @@
 
 .btn.outlined.primary:hover {
   background: var(--primary-color);
-  color: var(--text-color);
+  color: white;
 }
 
 /* Text Variant */

@@ -1,4 +1,6 @@
 import React from "react";
+import Typography from "../typography/Typography";
+import Button from "../button/Button";
 import styles from "./ProductCard.module.css";
 
 interface ProductCardProps {
@@ -18,11 +20,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className={styles.card}>
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.content}>
-        <h3 className={styles.title}>{title}</h3>
-        <p className={styles.price}>{price}</p>
-        <button className={styles.button} onClick={onAddToCart}>
+        <Typography variant="h6" className={styles.title}>
+          {title}
+        </Typography>
+        <Typography variant="caption" className={styles.price}>
+          {price}
+        </Typography>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          onClick={onAddToCart}
+        >
           Add to Cart
-        </button>
+        </Button>
       </div>
     </div>
   );
