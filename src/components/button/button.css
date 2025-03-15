@@ -1,30 +1,73 @@
-.storybook-button {
-  display: inline-block;
+@import "../../styles/configs.css";
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
   cursor: pointer;
-  border: 0;
-  border-radius: 3em;
-  font-weight: 700;
-  line-height: 1;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  transition: background 0.3s, border 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 8px;
 }
-.storybook-button--primary {
-  background-color: #555ab9;
-  color: white;
-}
-.storybook-button--secondary {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  background-color: transparent;
-  color: #333;
-}
-.storybook-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
-}
-.storybook-button--medium {
-  padding: 11px 20px;
+
+.custom-button.small {
+  padding: var(--padding-sm);
   font-size: 14px;
 }
-.storybook-button--large {
-  padding: 12px 24px;
+
+.custom-button.medium {
+  padding: var(--padding-md);
   font-size: 16px;
+}
+
+.custom-button.large {
+  padding: var(--padding-lg);
+  font-size: 18px;
+}
+
+.custom-button.rounded {
+  border-radius: 20px;
+}
+
+.custom-button.primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.custom-button.primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.custom-button.secondary {
+  background-color: var(--secondary-color);
+  color: #000;
+}
+
+.custom-button.secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.custom-button.outlined {
+  background-color: transparent;
+  color: var(--border-color);
+  border: 2px solid var(--border-color);
+}
+
+.custom-button.outlined:hover {
+  background-color: rgba(98, 0, 234, 0.1);
+}
+
+.custom-button.icon-only {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon {
+  font-size: var(--icon-size);
 }

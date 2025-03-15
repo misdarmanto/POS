@@ -1,7 +1,13 @@
 :root {
-  --primary-color: #007bff;
-  --secondary-color: #6c757d;
-  --background-color: #f8f9fa;
-  --text-color: #333;
-  --font-size: 16px;
+  --primary-color: #6200ea;
+  --primary-hover: #3700b3;
+  --secondary-color: #03dac6;
+  --secondary-hover: #018786;
+  --text-color: #ffffff;
+  --border-color: #6200ea;
+  --border-radius: 4px;
+  --padding-sm: 6px 12px;
+  --padding-md: 10px 16px;
+  --padding-lg: 14px 20px;
+  --icon-size: 20px;
 }

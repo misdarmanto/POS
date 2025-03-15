@@ -1,37 +1,37 @@
-import React from 'react';
+import React from "react";
+import "./button.css";
 
-import './button.css';
-
-export interface ButtonProps {
-  /** Is this the principal call to action on the page? */
-  primary?: boolean;
-  /** What background color to use */
-  backgroundColor?: string;
-  /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
-  /** Button contents */
-  label: string;
-  /** Optional click handler */
+interface ButtonProps {
+  label?: string;
+  variant?: "primary" | "secondary" | "outlined" | "icon";
+  size?: "small" | "medium" | "large";
+  rounded?: boolean;
+  icon?: React.ReactNode;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
-/** Primary UI component for user interaction */
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+const Button: React.FC<ButtonProps> = ({
   label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  variant = "primary",
+  size = "medium",
+  rounded = false,
+  icon,
+  onClick,
+  disabled = false,
+}) => {
   return (
     <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
+      className={`custom-button ${variant} ${size} ${
+        rounded ? "rounded" : ""
+      } ${icon && !label ? "icon-only" : ""}`}
+      onClick={onClick}
+      disabled={disabled}
     >
-      {label}
+      {icon && <span className="button-icon">{icon}</span>}
+      {label && <span className="button-label">{label}</span>}
     </button>
   );
 };
+
+export default Button;
