@@ -1,0 +1,84 @@
+/* Base Sidebar Styles */
+.sidebar {
+  height: 100vh;
+  background: white;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: width 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Collapsed State */
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Expanded State */
+.sidebar.expanded {
+  width: 220px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: gray;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: auto;
+}
+
+/* Menu Items */
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+  border-radius: 5px;
+  color: gray;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+/* Menu Icons */
+.menu-item svg {
+  font-size: 24px;
+}
+
+/* Menu Text Hidden When Collapsed */
+.menu-text {
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .menu-text {
+  opacity: 0;
+}
