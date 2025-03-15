@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { IoMenu, IoClose, IoHome, IoSettings, IoLogOut } from "react-icons/io5";
 import "./SideBar.css";
 
 interface SideBarProps {
+  expanded: boolean;
+  toggleExpand: () => void;
   activeItem?: string;
 }
 
@@ -12,14 +14,16 @@ const menuItems = [
   { name: "Logout", icon: <IoLogOut />, link: "#" },
 ];
 
-const SideBar: React.FC<SideBarProps> = ({ activeItem = "Home" }) => {
-  const [expanded, setExpanded] = useState(false);
-
+const SideBar: React.FC<SideBarProps> = ({
+  expanded,
+  toggleExpand,
+  activeItem = "Home",
+}) => {
   return (
     <aside className={`sidebar ${expanded ? "expanded" : "collapsed"}`}>
       {/* Toggle Button */}
       <div className="sidebar-header">
-        <button className="toggle-btn" onClick={() => setExpanded(!expanded)}>
+        <button className="toggle-btn" onClick={toggleExpand}>
           {expanded ? <IoClose size={28} /> : <IoMenu size={28} />}
         </button>
       </div>
