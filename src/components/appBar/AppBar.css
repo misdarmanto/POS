@@ -1,0 +1,92 @@
+/* Default Style */
+.appbar {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.appbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.appbar-logo img {
+  height: 40px;
+}
+
+.appbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.appbar-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.appbar-link:hover {
+  color: #007bff;
+}
+
+/* Variants */
+.appbar.dark {
+  background: black;
+  color: white;
+}
+
+.appbar.dark .appbar-link {
+  color: white;
+}
+
+.appbar.dark .appbar-link:hover {
+  color: #00d4ff;
+}
+
+.appbar.transparent {
+  background: transparent;
+  box-shadow: none;
+}
+
+.appbar.bordered {
+  border-bottom: 2px solid #ddd;
+}
+
+/* Mobile Styles */
+.appbar-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .appbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .appbar-links.open {
+    display: flex;
+  }
+
+  .appbar-menu-btn {
+    display: block;
+  }
+}
