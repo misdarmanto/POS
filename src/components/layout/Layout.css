@@ -1,0 +1,25 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Main Content Wrapper */
+.main-container {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 60px; /* Adjusted for AppBar height */
+}
+
+/* Sidebar */
+.sidebar {
+  transition: width 0.3s ease-in-out;
+}
+
+/* Content */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease-in-out;
+}

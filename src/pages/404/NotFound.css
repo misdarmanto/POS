@@ -1,0 +1,28 @@
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.not-found-title {
+  font-size: 100px;
+  color: #ff4757;
+}
+
+.not-found-message {
+  font-size: 18px;
+  color: #2f3542;
+}
+
+.not-found-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.not-found-link:hover {
+  background-color: #3742fa;
+}

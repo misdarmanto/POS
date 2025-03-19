@@ -1,0 +1,57 @@
+@import "../../styles/configs.css";
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 200px;
+}
+
+.select-label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.select-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.select-box:hover {
+  border-color: var(--primary-color);
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.select-menu {
+  position: absolute;
+  width: 100%;
+  margin-top: 5px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.select-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-menu li:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
